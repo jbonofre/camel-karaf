@@ -1609,7 +1609,7 @@
         <bundle dependency='true'>mvn:org.apache.httpcomponents/httpasyncclient-osgi/4.1.5</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/3.14.0</bundle>
         <bundle dependency='true'>mvn:org.apache.olingo/olingo-odata2-api/2.0.13</bundle>
-        <bundle>wrap:mvn:org.apache.camel.karaf/camel-olingo2/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-olingo2/${project.version}</bundle>
     </feature>
 <!--    <feature name='camel-olingo4' version='${project.version}' start-level='50'>-->
 <!--        <feature version='${project.version}'>camel-core</feature>-->
