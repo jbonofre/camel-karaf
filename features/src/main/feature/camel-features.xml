@@ -902,7 +902,7 @@
 <!--    </feature>-->
     <feature name='camel-github' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <!-- the latest gson version of github core supports is 2.2.2 -->
+        <!-- the latest version of gson supported by github core is 2.2.2. -->
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.egit.github.core/2.1.5_1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-github/${project.version}</bundle>
     </feature>
