@@ -37,6 +37,8 @@
             org.apache.camel*;version=${camel.version}
         </camel.osgi.export>
         <camel.osgi.import>
+            com.google.common.base;version="[33.0.0,34)",
+            com.google.common.cache;version="[33.0.0,34)",
             *
         </camel.osgi.import>
     </properties>
