@@ -953,9 +953,9 @@
         <bundle dependency='true'>mvn:com.google.guava/failureaccess/1.0.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api/gax/2.41.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api/gax-grpc/2.41.0</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-cloud-pubsub-v1/1.108.2</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/1.22.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/1.22.0</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-cloud-pubsub-v1/1.22.0</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/1.61.0</bundle>
         <bundle dependency='true'>mvn:org.threeten/threetenbp/1.6.8</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-pubsub/${project.version}</bundle>
