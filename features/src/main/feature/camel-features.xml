@@ -690,7 +690,7 @@
     <feature name='camel-drill' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <feature>spring-jdbc</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.drill.exec/drill-jdbc-all/1.21.1$Export-Package=org.apache.drill.jdbc.*</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.drill.exec/drill-jdbc-all/${apache-drill-version}$Export-Package=org.apache.drill.jdbc.*;version=${apache-drill-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-drill/${project.version}</bundle>
     </feature>
 <!--    <feature name='camel-dropbox' version='${project.version}' start-level='50'>-->
