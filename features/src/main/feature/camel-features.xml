@@ -414,33 +414,32 @@
 <!--        <bundle dependency='true'>wrap:mvn:com.amazonaws/aws-xray-recorder-sdk-sql-mysql/${aws-xray-version}</bundle>-->
 <!--        <bundle>mvn:org.apache.camel/camel-aws-xray/${project.version}</bundle>-->
 <!--    </feature>-->
-    <feature name='camel-azure-storage-blob' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
-        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/3.4.34</bundle>
+    <feature name='camel-azure-storage' version='${project.version}' start-level='50'>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.45.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
+        <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.1</bundle>
+    </feature>
+    <feature name='camel-azure-storage-blob' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${project.version}'>camel-azure-storage</feature>
+        <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
+        <bundle dependency='true'>mvn:io.projectreactor/reactor-core/3.4.34</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/12.25.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/${azure-storage-blob-changefeed-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.1</bundle>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-cloudevents/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${project.version}</bundle>
     </feature>
     <feature name='camel-azure-storage-datalake' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
+        <feature version='${project.version}'>camel-azure-storage</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.45.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-file-datalake/12.18.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-datalake/${project.version}</bundle>
     </feature>
     <feature name='camel-azure-storage-queue' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.45.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
+        <feature version='${project.version}'>camel-azure-storage</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-queue/12.20.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.1</bundle>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-cloudevents/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-queue/${project.version}</bundle>
     </feature>
