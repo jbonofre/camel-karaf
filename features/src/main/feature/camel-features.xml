@@ -860,12 +860,12 @@
 <!--        <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>-->
 <!--        <bundle>mvn:org.apache.camel/camel-grape/${project.version}</bundle>-->
 <!--    </feature>-->
-<!--    <feature name='camel-graphql' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle dependency='true'>mvn:org.apache.httpcomponents/httpcore-osgi/${httpcore4-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:org.apache.httpcomponents/httpclient-osgi/${httpclient4-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-graphql/${project.version}</bundle>-->
-<!--    </feature>-->
+    <feature name='camel-graphql' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents.core5/httpcore5/${httpcore-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents.client5/httpclient5/${httpclient-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-graphql/${project.version}</bundle>
+    </feature>
 <!--    <feature name='camel-groovy' version='${project.version}' start-level='50'>-->
 <!--        <feature version='${project.version}'>camel-core</feature>-->
 <!--        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/${ant-bundle-version}</bundle>-->
