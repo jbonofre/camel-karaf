@@ -416,12 +416,12 @@
 <!--    </feature>-->
     <feature name='camel-azure-storage-blob' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/1.0.4</bundle>
+        <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor/reactor-core/3.4.34</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.45.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/12.25.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/12.0.0-beta.19</bundle>
+        <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/${azure-storage-blob-changefeed-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.1</bundle>
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-cloudevents/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${project.version}</bundle>
