@@ -1014,7 +1014,7 @@
     </feature>
     <feature name='camel-ironmq' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ironmq/3.0.5_1</bundle>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ironmq/${ironmq-version}_1</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.commons/commons-lang3/${commons-lang3-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ironmq/${project.version}</bundle>
