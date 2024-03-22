@@ -1047,7 +1047,7 @@
     <feature name='camel-jpa' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <feature version='${spring.version}'>spring-orm</feature>
-        <bundle>mvn:jakarta.persistence/jakarta.persistence-api/${jakarta-persistence-api-version}</bundle>
+        <bundle dependency='true'>mvn:jakarta.persistence/jakarta.persistence-api/${jakarta-persistence-api-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-jpa/${project.version}</bundle>
     </feature>
 <!--    <feature name='camel-jsch' version='${project.version}' start-level='50'>-->
