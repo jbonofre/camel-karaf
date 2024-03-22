@@ -724,7 +724,7 @@
     </feature>
     <feature name='camel-fop' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.xmlgraphics/fop-core/2.9$Export-Package=org.apache.fop.apps;version=2.9,org.apache.fop.pdf;version=2.9</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.xmlgraphics/fop-core/${fop-version}$Export-Package=org.apache.fop.apps;version=${fop-version},org.apache.fop.pdf;version=${fop-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-fop/${project.version}</bundle>
     </feature>
     <feature name='camel-freemarker' version='${project.version}' start-level='50'>
