@@ -2104,7 +2104,7 @@
 <!--    </feature>-->
     <feature name='camel-xj' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-xslt-saxon</feature>
-        <bundle dependency='true'>mvn:com.fasterxml.jackson.core/jackson-core/${jackson2-version}</bundle>
+        <feature>jackson</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-xj/${project.version}</bundle>
     </feature>
 <!--    <feature name='camel-xmlsecurity' version='${project.version}' start-level='50'>-->
