@@ -844,7 +844,7 @@
     </feature>
     <feature name='camel-groovy' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.groovy/groovy/4.0.18</bundle>
+        <bundle dependency='true'>mvn:org.apache.groovy/groovy/${groovy-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-groovy/${project.version}</bundle>
     </feature>
 <!--    <feature name='camel-grok' version='${project.version}' start-level='50'>-->
