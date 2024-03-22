@@ -2160,8 +2160,8 @@
     <feature name='camel-zookeeper' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <feature>jackson</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.jute;version=${zookeeper-version},org.apache.zookeeper.*;version=${zookeeper-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}$Export-Package=org.apache.zookeeper*;version=${zookeeper-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.zookeeper/zookeeper-jute/${zookeeper-version}$Export-Package=org.apache.*;version=${zookeeper-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-client/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-framework/${curator-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.curator/curator-recipes/${curator-version}</bundle>
