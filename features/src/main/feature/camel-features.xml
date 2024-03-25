@@ -1157,6 +1157,8 @@
     <feature name='camel-kubernetes' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <feature version='${jackson2-version}'>jackson</feature>
+        <bundle dependency='true'>wrap:mvn:io.fabric8/kubernetes-client-api/${kubernetes-client-version}</bundle>
+        <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-admissionregistration/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-apiextensions/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-apps/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-autoscaling/${kubernetes-model-version}</bundle>
@@ -1171,7 +1173,6 @@
         <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm-version}</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm-version}</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-admissionregistration/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-discovery/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-events/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-extensions/${kubernetes-model-version}</bundle>
@@ -1197,7 +1198,6 @@
         <bundle dependency='true'>mvn:io.fabric8/openshift-model-storageversionmigrator/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/openshift-model-tuned/${kubernetes-model-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/openshift-model-whereabouts/${kubernetes-model-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.fabric8/kubernetes-client-api/${kubernetes-client-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-kubernetes/${project.version}</bundle>
     </feature>
     <feature name='camel-kudu' version='${project.version}' start-level='50'>
