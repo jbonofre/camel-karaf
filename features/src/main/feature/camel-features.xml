@@ -653,7 +653,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-cxf-spring-all/${project.version}</bundle>
     </feature>
     <feature name='camel-datasonnet' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-cxf</feature>
+        <feature version='${project.version}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:com.datasonnet/datasonnet-mapper/${datasonnet-mapper-version}</bundle>
         <bundle dependency='true'>mvn:io.github.classgraph/classgraph/${classgraph-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
