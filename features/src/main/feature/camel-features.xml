@@ -1592,7 +1592,7 @@
     <feature name='camel-quickfix' version='${project.version}' start-level='50'>
         <feature>camel-saxon</feature>
         <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>
-        <bundle>mvn:org.quickfixj/quickfixj-all/${quickfixj-version}</bundle>
+        <bundle dependency='true'>mvn:org.quickfixj/quickfixj-all/${quickfixj-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-quickfix/${project.version}</bundle>
     </feature>
     <feature name='camel-spring-rabbitmq' version='${project.version}' start-level='50'>
