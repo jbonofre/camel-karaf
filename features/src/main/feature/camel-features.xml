@@ -1537,7 +1537,6 @@
 <!--    </feature>-->
     <feature name='camel-rest-openapi' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <feature version='${project.version}'>camel-http</feature>
         <feature>jackson</feature>
         <bundle dependency='true'>wrap:mvn:com.atlassian.oai/swagger-request-validator-core/${swagger-request-validator-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.swagger/swagger-parser/${swagger-java-parser-version}</bundle>
