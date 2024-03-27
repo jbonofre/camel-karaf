@@ -627,6 +627,8 @@
     </feature>
     <feature name='camel-csimple-joor' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
+        <!-- wrap protocol needed because joor has a Require-Capability: osgi.ee;filter:="(osgi.ee=UNKNOWN) in its manifest.
+         The wrap does not support & , so it's not possible to add version to the filter -->
         <bundle dependency='true'>wrap:mvn:org.jooq/joor/${joor-version}$overwrite=merge&amp;Require-Capability=osgi.ee;filter:="(osgi.ee=JavaSE)"</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-csimple-joor/${project.version}</bundle>
     </feature>
