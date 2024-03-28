@@ -783,6 +783,13 @@
         <bundle dependency='true'>wrap:mvn:org.elasticsearch.client/elasticsearch-rest-client-sniffer/8.12.1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-elasticsearch-rest-client/${project.version}</bundle>
     </feature>
+    <feature name='camel-elytron' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${project.version}'>camel-undertow</feature>
+        <bundle dependency='true'>wrap:mvn:org.wildfly.security.elytron-web/undertow-server/${elytron-web}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.wildfly.security/wildfly-elytron/${wildfly-elytron}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-elytron/${project.version}</bundle>
+    </feature>
     <feature name='camel-exec' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.commons/commons-exec/${commons-exec-version}</bundle>
@@ -1495,6 +1502,7 @@
         <bundle dependency='true'>mvn:org.apache.pdfbox/pdfbox/${pdfbox-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.pdfbox/pdfbox-io/${pdfbox-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.pdfbox/fontbox/${pdfbox-version}</bundle>
+        <bundle dependency='true'>mvn:commons-logging/commons-logging/${commons-logging-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pdf/${project.version}</bundle>
     </feature>
     <feature name='camel-pg-replication-slot' version='${project.version}' start-level='50'>
@@ -1627,12 +1635,12 @@
         <bundle dependency='true'>wrap:mvn:org.python/jython-standalone/${jython-standalone-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-robotframework/${project.version}</bundle>
     </feature>
-<!--    <feature name='camel-rss' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-atom</feature>-->
-<!--        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/${jdom-bundle-version}</bundle>-->
-<!--        <bundle dependency="true">mvn:com.rometools/rome/${rome-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-rss/${project.version}</bundle>-->
-<!--    </feature>-->
+    <feature name='camel-rss' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-atom</feature>
+        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jdom/2.0.6.1_1</bundle>
+        <bundle dependency="true">mvn:com.rometools/rome/${rome-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-rss/${project.version}</bundle>
+    </feature>
 <!--    <feature name='camel-salesforce' version='${project.version}' start-level='50'>-->
 <!--        <feature>jetty</feature>-->
 <!--        <feature version='${project.version}'>camel-core</feature>-->
@@ -1696,8 +1704,21 @@
         <bundle>mvn:org.apache.camel.karaf/camel-servlet/${project.version}</bundle>
     </feature>
     <feature name='camel-shiro' version='${project.version}' start-level='50'>
+        <feature>spifly</feature>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>mvn:org.apache.shiro/shiro-core/1.13.0</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-core/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-event/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-lang/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-cache/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-core/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-config-ogdl/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-core/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-cipher/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-hash/${shiro-version}</bundle>
+        <bundle dependency='true'>mvn:jakarta.annotation/jakarta.annotation-api/1.3.5</bundle>
+        <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
+        <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.shiro/shiro-jakarta-ee/${shiro-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-shiro/${project.version}</bundle>
     </feature>
     <feature name='camel-sjms' version='${project.version}' start-level='50'>
@@ -1721,21 +1742,21 @@
 <!--        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${okclient-version}</bundle>-->
 <!--        <bundle>mvn:org.apache.camel/camel-slack/${project.version}</bundle>-->
 <!--    </feature>-->
-<!--    <feature name='camel-smpp' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle dependency='true'>mvn:org.jsmpp/jsmpp/${jsmpp-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-smpp/${project.version}</bundle>-->
-<!--    </feature>-->
-<!--    <feature name='camel-snakeyaml' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-snakeyaml/${project.version}</bundle>-->
-<!--    </feature>-->
-<!--    <feature name='camel-snmp' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.snmp4j/${snmp4j-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-snmp/${project.version}</bundle>-->
-<!--    </feature>-->
+    <feature name='camel-smpp' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <bundle dependency='true'>mvn:org.jsmpp/jsmpp/${jsmpp-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-smpp/${project.version}</bundle>
+    </feature>
+    <feature name='camel-snakeyaml' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-snakeyaml/${project.version}</bundle>
+    </feature>
+    <feature name='camel-snmp' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <bundle dependency='true'>wrap:mvn:org.snmp4j/snmp4j/${snmp4j-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-snmp/${project.version}</bundle>
+    </feature>
 <!--    <feature name='camel-soap' version='${project.version}' start-level='50'>-->
 <!--        <feature version='${project.version}'>camel-jaxb</feature>-->
 <!--        <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/${geronimo-ws-metadata-spec-version}</bundle>-->
@@ -1801,16 +1822,13 @@
         <feature>spring-jdbc</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-sql/${project.version}</bundle>
     </feature>
-<!--    <feature name='camel-ssh' version='${project.version}' start-level='50'>-->
-<!--        <feature version='${project.version}'>camel-core</feature>-->
-<!--        <bundle dependency='true'>mvn:org.apache.mina/mina-core/${mina-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:org.apache.sshd/sshd-osgi/${sshd-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle-version}</bundle>-->
-<!--        <bundle dependency='true'>mvn:net.i2p.crypto/eddsa/${eddsa-version}</bundle>-->
-<!--        <bundle>mvn:org.apache.camel/camel-ssh/${project.version}</bundle>-->
-<!--    </feature>-->
+    <feature name='camel-ssh' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <feature version="${bouncycastle-version}">bouncycastle</feature>
+        <bundle dependency='true'>mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle-version}</bundle>
+        <bundle dependency='true'>mvn:org.apache.sshd/sshd-osgi/${sshd-version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-ssh/${project.version}</bundle>
+    </feature>
 <!--    <feature name='camel-stax' version='${project.version}' start-level='50'>-->
 <!--        <feature version='${project.version}'>camel-core</feature>-->
 <!--        <bundle dependency='true'>mvn:com.fasterxml.woodstox/woodstox-core/${woodstox-core-version}</bundle>-->
@@ -1958,6 +1976,20 @@
         <feature version='${project.version}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:org.twitter4j/twitter4j-core/${twitter4j-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-twitter/${project.version}</bundle>
+    </feature>
+    <feature name='camel-undertow' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <feature>jakarta-servlet</feature>
+        <bundle dependency='true'>mvn:io.undertow/undertow-core/${undertow-version}</bundle>
+        <bundle dependency='true'>mvn:io.undertow/undertow-servlet/${undertow-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.wildfly.common/wildfly-common/1.5.4.Final$Export-Package=*;version=1.5.4.Final</bundle>
+        <bundle dependency='true'>mvn:org.jboss.xnio/xnio-api/3.8.9.Final</bundle>
+        <bundle dependency='true'>mvn:org.jboss.xnio/xnio-nio/3.8.9.Final</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jboss.threads/jboss-threads/3.5.0.Final</bundle>
+        <bundle dependency='true'>mvn:org.wildfly.client/wildfly-client-config/1.0.1.Final</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-attachments/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${project.version}</bundle>
+        <bundle>mvn:org.apache.camel.karaf/camel-undertow/${project.version}</bundle>
     </feature>
     <feature name='camel-univocity-parsers' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
