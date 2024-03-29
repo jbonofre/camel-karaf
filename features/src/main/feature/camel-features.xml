@@ -2027,7 +2027,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-thrift/${project.version}</bundle>
     </feature>
     <feature name='camel-tika' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <bundle dependency='true'>mvn:org.apache.tika/tika-core/${tika-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.tika/tika-parser-html-commons/${tika-version}</bundle>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
