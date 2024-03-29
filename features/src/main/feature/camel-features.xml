@@ -1484,15 +1484,15 @@
         <feature>jackson</feature>
         <feature version='${guava-version}'>guava</feature>
         <!-- use wrap to override the guava version -->
-        <bundle dependency='true'>wrap:mvn:com.github.openstack4j.core/openstack4j-core/${openstack4j-version}$overwrite=merge&amp;Import-Package=com.fasterxml*,com.github*,javax*,org*,com.google.common.base;version=33.0.0</bundle>
+        <bundle dependency='true'>wrap:mvn:com.github.openstack4j.core/openstack4j-core/${openstack4j-version}$overwrite=merge&amp;Import-Package=com.fasterxml*,com.github*,javax*,org*,com.google*;version=33.0.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.github.openstack4j.core.connectors/openstack4j-okhttp/${openstack4j-version}$overwrite=merge&amp;Import-Package=com.fasterxml*,okhttp3*,javax*,org*;resolution:=optional,com.google.common.base;version=33.0.0</bundle>
-        <bundle dependency='true'>wrap:mvn:com.github.java-json-tools/json-patch/${json-patch-version}$overwrite=merge&amp;Export-Package=com.github.fge*;version=${json-patch-version}&amp;Import-Package=com.fasterxml*,com.github;resolution:=optional;javax*</bundle>
-        <bundle dependency='true'>mvn:com.github.java-json-tools/jackson-coreutils/2.0</bundle>
+        <bundle dependency='true'>wrap:mvn:com.github.java-json-tools/json-patch/${json-patch-version}$overwrite=merge&amp;Export-Package=com.github.fge*;version=${json-patch-version}&amp;Import-Package=com.fasterxml*,com.github*;javax*</bundle>
+        <bundle dependency='true'>wrap:mvn:com.github.java-json-tools/jackson-coreutils/2.0$overwrite=merge&amp;Export-Package=com.github.fge*;version=2.0&amp;Import-Package=com.fasterxml*,com.github*;javax*</bundle>
         <bundle dependency='true'>mvn:com.github.java-json-tools/msg-simple/1.2</bundle>
         <bundle dependency='true'>mvn:com.github.java-json-tools/btf/1.3</bundle>
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/4.12.0</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${squareup-okhttp-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/1.3.7</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm-version}</bundle>
         <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm-version}</bundle>
