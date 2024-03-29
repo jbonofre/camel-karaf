@@ -1481,7 +1481,7 @@
     </feature>
     <feature name='camel-openstack' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
-        <feature>jackson</feature>
+        <feature version='[2.16,2.17)'>jackson</feature>
         <feature version='${guava-version}'>guava</feature>
         <!-- use wrap to override the guava version -->
         <bundle dependency='true'>wrap:mvn:com.github.openstack4j.core/openstack4j-core/${openstack4j-version}$overwrite=merge&amp;Import-Package=com.fasterxml*,com.github*,javax*,org*,com.google*;version=33.0.0</bundle>
