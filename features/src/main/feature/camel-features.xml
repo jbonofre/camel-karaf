@@ -1544,7 +1544,7 @@
     </feature>
     <feature name='camel-pulsar' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
-        <bundle dependency='true'>wrap:mvn:org.apache.pulsar/pulsar-client-admin/${pulsar-version}$overwrite=merge&amp;Export-Package=org.apache.pulsar*;version=${pulsar-version};resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:org.apache.pulsar/pulsar-client-admin/${pulsar-version}$Export-Package=org.apache.pulsar*;version=${pulsar-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-pulsar/${project.version}</bundle>
     </feature>
     <feature name='camel-python' version='${project.version}' start-level='50'>
