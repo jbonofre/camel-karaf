@@ -1994,6 +1994,11 @@
         <bundle>mvn:org.apache.camel.karaf/camel-http-base/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-undertow/${project.version}</bundle>
     </feature>
+    <feature name='camel-undertow-spring-security' version='${project.version}' start-level='50'>
+        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${project.version}'>camel-undertow</feature>
+        <bundle>mvn:org.apache.camel.karaf/camel-undertow-spring-security/${project.version}</bundle>
+    </feature>
     <feature name='camel-univocity-parsers' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <bundle dependency='true'>mvn:com.univocity/univocity-parsers/${univocity-parsers-version}</bundle>
