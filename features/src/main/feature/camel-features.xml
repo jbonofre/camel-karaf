@@ -1852,7 +1852,7 @@
 <!--        <bundle dependency='true'>mvn:org.fusesource.hawtdispatch/hawtdispatch-transport/${hawtdispatch-version}</bundle>-->
 <!--        <bundle>mvn:org.apache.camel/camel-stomp/${project.version}</bundle>-->
 <!--    </feature>-->
-    <feature name='camel-stringtemplate' version='${project.version}' start-level='50'>
+    <feature name='camel-string-template' version='${project.version}' start-level='50'>
         <feature version='${project.version}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:org.antlr/ST4/${stringtemplate-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stringtemplate/${project.version}</bundle>
