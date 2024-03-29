@@ -2107,7 +2107,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-webhook/${project.version}</bundle>
     </feature>
     <feature name='camel-whatsapp' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='${project.version}'>camel-webhook</feature>
         <feature>jackson</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
