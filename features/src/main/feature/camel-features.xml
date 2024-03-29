@@ -1155,7 +1155,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-kamelet/${project.version}</bundle>
     </feature>
     <feature name='camel-kubernetes' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='${jackson2-version}'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:io.fabric8/kubernetes-client-api/${kubernetes-client-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-admissionregistration/${kubernetes-client-version}</bundle>
