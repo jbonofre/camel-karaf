@@ -821,7 +821,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-elytron/${project.version}</bundle>
     </feature>
     <feature name='camel-etcd3' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature>jackson</feature>
         <feature>netty</feature>
         <bundle dependency='true'>wrap:mvn:io.etcd/jetcd-common/${jetcd-version}</bundle>
