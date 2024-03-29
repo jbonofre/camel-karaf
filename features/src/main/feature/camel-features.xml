@@ -1480,7 +1480,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-olingo4/${project.version}</bundle>
     </feature>
     <feature name='camel-openstack' version='${project.version}' start-level='50'>
-        <feature version='${project.version}'>camel-core</feature>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature>jackson</feature>
         <feature version='${guava-version}'>guava</feature>
         <!-- use wrap to override the guava version -->
