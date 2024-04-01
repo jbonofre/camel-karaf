@@ -1235,6 +1235,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-kamelet/${project.version}</bundle>
     </feature>
     <feature name='camel-kubernetes' version='${project.version}' start-level='50'>
+        <feature prerequisite="true">spifly</feature>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='[2.16,2.17)'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:io.fabric8/kubernetes-client-api/${kubernetes-client-version}</bundle>
@@ -1247,12 +1248,6 @@
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-coordination/${kubernetes-client-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-core/${kubernetes-client-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-common/${kubernetes-client-version}</bundle>
-        <bundle dependency='true'>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/1.3.7</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-discovery/${kubernetes-client-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-events/${kubernetes-client-version}</bundle>
         <bundle dependency='true'>mvn:io.fabric8/kubernetes-model-extensions/${kubernetes-client-version}</bundle>
