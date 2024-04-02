@@ -1524,11 +1524,6 @@
         <bundle dependency='true'>mvn:org.yaml/snakeyaml/${snakeyaml-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${squareup-okhttp-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${squareup-okhttp-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-commons/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-util/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-tree/${asm-version}</bundle>
-        <bundle dependency='true'>mvn:org.ow2.asm/asm-analysis/${asm-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-openstack/${project.version}</bundle>
     </feature>
     <feature name='camel-opentelemetry' version='${project.version}' start-level='50'>
