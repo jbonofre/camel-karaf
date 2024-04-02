@@ -37,6 +37,8 @@
             org.apache.camel*;version=${camel.version}
         </camel.osgi.export>
         <camel.osgi.import>
+            !org.w3._2003._05.soap_envelope,
+            !org.xmlsoap.schemas.soap.envelope,
             *
         </camel.osgi.import>
     </properties>
