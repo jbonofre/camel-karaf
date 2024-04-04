@@ -1909,11 +1909,11 @@
     </feature>
     <feature name='camel-stomp' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
-        <details>
+        <!--
             The bundle wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1 provides javax.jms package
             required by mvn:org.fusesource.stompjms/stompjms-client/${stompjms-version} bundle. The wrap protocol is used because
             it is not a valid OSGI bundle.
-        </details>
+        -->
         <bundle dependency='true'>wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1</bundle>
         <bundle dependency='true'>mvn:org.fusesource.stompjms/stompjms-client/${stompjms-version}</bundle>
         <bundle dependency='true'>mvn:org.fusesource.hawtbuf/hawtbuf/1.9</bundle>
