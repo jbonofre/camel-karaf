@@ -1165,7 +1165,7 @@
         <bundle dependency='true'>mvn:io.atlassian.util.concurrent/atlassian-util-concurrent/4.0.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/1.43.3$overwrite=merge&amp;Import-Package=io.opencensus*,com.google.api.client*,org.apache.http*,javax*,com.google.common*;version="[33,34)"&amp;Export-Package=com.google.api.client.auth*;version=1.43.3</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/1.43.3</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/1.35.0$overwrite=merge&amp;Import-Package=com.google.api.client.auth*,javax*,com.google.common*;version="[33,34)"&amp;Export-Package=com.google.api.client*;version=1.35.0</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/1.35.0$overwrite=merge&amp;Import-Package=com.google.api.client*,javax*,com.google.common*;version="[33,34)"&amp;Export-Package=com.google.api.client*;version=1.35.0</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/0.31.1</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/0.31.1</bundle>
