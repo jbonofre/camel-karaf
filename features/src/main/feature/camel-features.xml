@@ -1903,10 +1903,6 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stitch/${project.version}</bundle>
     </feature>
-    <feature name='camel-stream' version='${project.version}' start-level='50'>
-        <feature version='${camel.osgi.version.range}'>camel-core</feature>
-        <bundle>mvn:org.apache.camel.karaf/camel-stream/${project.version}</bundle>
-    </feature>
     <feature name='camel-stomp' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <!--
@@ -1920,6 +1916,10 @@
         <bundle dependency='true'>mvn:org.fusesource.hawtdispatch/hawtdispatch/1.20</bundle>
         <bundle dependency='true'>mvn:org.fusesource.hawtdispatch/hawtdispatch-transport/1.20</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stomp/${project.version}</bundle>
+    </feature>    
+    <feature name='camel-stream' version='${project.version}' start-level='50'>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
+        <bundle>mvn:org.apache.camel.karaf/camel-stream/${project.version}</bundle>
     </feature>
     <feature name='camel-string-template' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
