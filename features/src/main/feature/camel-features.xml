@@ -1174,9 +1174,9 @@
         <bundle dependency='true'>wrap:mvn:com.atlassian.jira/jira-rest-java-client-api/${jira-rest-client-api-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.atlassian.sal/sal-api/5.1.4$overwrite=merge&amp;Import-Package=*;resolution:=optional&amp;Export-Package=com.atlassian.sal.api*;version=5.1.4</bundle>
         <bundle dependency='true'>mvn:io.atlassian.util.concurrent/atlassian-util-concurrent/4.0.1</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/1.43.3$overwrite=merge&amp;Import-Package=io.opencensus*,com.google.api.client*,org.apache.http*,javax*,com.google.common*&amp;Export-Package=com.google.api.client.auth*;version=1.43.3</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/1.43.3$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/1.43.3</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.api.client*,javax*,com.google.common*&amp;Export-Package=com.google.api.client*;version=${google-oauth-client-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.oauth-client/google-oauth-client/${google-oauth-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/0.31.1</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/0.31.1</bundle>
         <bundle dependency='true'>mvn:joda-time/joda-time/2.9.9</bundle>
