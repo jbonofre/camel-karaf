@@ -1673,6 +1673,10 @@
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-platform-http/${project.version}</bundle>
     </feature>
+    <feature name='camel-platform-http-main' version='${project.version}' start-level='50'>
+        <feature version='${camel.osgi.version.range}'>camel-platform-http-vertx</feature>
+        <bundle>mvn:org.apache.camel.karaf/camel-platform-http-main/${project.version}</bundle>
+    </feature>
     <feature name='camel-printer' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-printer/${project.version}</bundle>
