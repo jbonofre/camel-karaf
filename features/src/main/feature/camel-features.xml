@@ -2027,6 +2027,11 @@
         <bundle dependency='true'>wrap:mvn:org.springframework.ldap/spring-ldap-core/${spring-ldap-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-ldap/${project.version}</bundle>
     </feature>
+    <feature name='camel-spring-main' version='${project.version}' start-level='50'>
+        <feature version='${camel.osgi.version.range}'>camel-core</feature>
+        <feature version='${camel.osgi.spring.version}'>spring</feature>
+        <bundle>mvn:org.apache.camel.karaf/camel-spring-main/${project.version}</bundle>
+    </feature>
     <feature name='camel-spring-rabbitmq' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='${camel.osgi.spring.version}'>spring-tx</feature>
