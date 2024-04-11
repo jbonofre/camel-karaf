@@ -2071,6 +2071,10 @@
         <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-attachments/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-spring-ws/${project.version}</bundle>
     </feature>
+    <feature name='camel-spring-xml' version='${project.version}' start-level='50'>
+        <feature version='${camel.osgi.version.range}'>camel-spring</feature>
+        <bundle>mvn:org.apache.camel.karaf/camel-spring-xml/${project.version}</bundle>
+    </feature>
     <feature name='camel-sql' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='${camel.osgi.spring.version}'>spring-tx</feature>
