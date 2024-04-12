@@ -522,7 +522,7 @@
     </feature>
     <feature name='camel-azure-files' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-ftp</feature>
-        <bundle dependency='true'>mvn:org.apache.camel.karaf/camel-cloudevents/${project.version}</bundle>
+        <feature version='${camel.osgi.version.range}'>camel-cloudevents</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.46.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.2</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.2</bundle>
