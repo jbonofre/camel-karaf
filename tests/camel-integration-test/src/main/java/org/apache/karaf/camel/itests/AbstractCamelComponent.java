@@ -13,15 +13,10 @@
  */
 package org.apache.karaf.camel.itests;
 
-import java.util.ArrayList;
-
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.karaf.core.OsgiClassResolver;
 import org.apache.camel.karaf.core.OsgiDefaultCamelContext;
-import org.apache.camel.karaf.core.OsgiFactoryFinder;
 import org.apache.camel.model.ModelCamelContext;
-import org.apache.camel.model.RouteDefinition;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.ComponentContext;
@@ -37,13 +32,7 @@ public abstract class AbstractCamelComponent {
     @Activate
     public void activate(ComponentContext componentContext) throws Exception {
         BundleContext bundleContext = componentContext.getBundleContext();
-        OsgiDefaultCamelContext osgiDefaultCamelContext = new OsgiDefaultCamelContext(bundleContext);
-        OsgiClassResolver resolver =  new OsgiClassResolver(camelContext, bundleContext);
-        osgiDefaultCamelContext.setClassResolver(resolver);
-        osgiDefaultCamelContext.getCamelContextExtension().setName("context-test");
-        osgiDefaultCamelContext.getCamelContextExtension().setBootstrapFactoryFinder(new OsgiFactoryFinder(bundleContext,resolver,"META-INF/services/org/apache/camel/"));
-
-        camelContext = osgiDefaultCamelContext;
+        camelContext = new OsgiDefaultCamelContext(bundleContext);
         serviceRegistration = bundleContext.registerService(CamelContext.class, camelContext, null);
         camelContext.start();
         camelContext.addRoutes(createRouteBuilder());
@@ -52,7 +41,6 @@ public abstract class AbstractCamelComponent {
     @Deactivate
     public void deactivate() throws Exception {
         camelContext.stop();
-        camelContext.removeRouteDefinitions(new ArrayList<RouteDefinition>(camelContext.getRouteDefinitions()));
         serviceRegistration.unregister();
     }
 
