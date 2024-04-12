@@ -516,7 +516,7 @@
         <!-- END: Maven Properties defining the version of 3rd party libraries used in Camel -->
         <groovy-version>4.0.18</groovy-version>
         <camel.osgi.asm.version>[9.5,10)</camel.osgi.asm.version>
-        <camel.osgi.spring.version>6</camel.osgi.spring.version>
+        <camel.osgi.spring.version>[6.1,6.2)</camel.osgi.spring.version>
         <spring.amqp.version>3.1.2</spring.amqp.version>
         <camel.osgi.slf4j.version>[2,3)</camel.osgi.slf4j.version>
         <camel.osgi.jakarta.annotation.version>[2,3)</camel.osgi.jakarta.annotation.version>
@@ -544,18 +544,17 @@
         <camel.osgi.cxf.version>[4.0,4.1)</camel.osgi.cxf.version>
         <jakarta.activation.version.range>[2,3)</jakarta.activation.version.range>
         <jakarta.xml.ws.version>4.0.1</jakarta.xml.ws.version>
-        <karaf.version>4.4.4</karaf.version>
+        <karaf.version>4.4.5</karaf.version>
         <osgi.version>8.0.0</osgi.version>
         <osgi.cmpn.version>7.0.0</osgi.cmpn.version>
         <osgi.service.event.version>1.4.1</osgi.service.event.version>
         <osgi.service.component.version>1.5.1</osgi.service.component.version>
         <slf4j.version>2.0.10</slf4j.version>
-        <!-- TODO upgrade to Spring 6.1.1 -->
-        <spring.version>6.0.12</spring.version>
-
 
         <camel.osgi.version.clean>4.5</camel.osgi.version.clean>
-        <camel.osgi.import.camel.version>version="[$(version;==;${camel.osgi.version.clean}),$(version;=+;${camel.osgi.version.clean}))"</camel.osgi.import.camel.version>
+        <camel.osgi.next.version.clean>4.6</camel.osgi.next.version.clean>
+        <camel.osgi.version.range>[${camel.osgi.version.clean},${camel.osgi.next.version.clean})</camel.osgi.version.range>
+        <camel.osgi.import.camel.version>version="${camel.osgi.version.range}"</camel.osgi.import.camel.version>
         <camel.osgi.camel.import>org.apache.camel.*;${camel.osgi.import.camel.version},</camel.osgi.camel.import>
 
         <maven-shade-plugin-version>3.5.1</maven-shade-plugin-version>
