@@ -175,7 +175,7 @@
         <bundle dependency='true'>mvn:io.projectreactor/reactor-core/3.4.34</bundle>
     </feature>
     <feature name="azure-storage" version="1.46.0" start-level="50">
-        <feature>azure</feature>
+        <feature version='[1.46,1.47)'>azure</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
     </feature>
     <feature name="azure-eventhubs" version="1.46.0" start-level="50">
