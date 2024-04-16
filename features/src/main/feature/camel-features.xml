@@ -544,7 +544,7 @@
     </feature>
     <feature name='camel-azure-storage-blob' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-cloudevents</feature>
-        <feature>azure-storage</feature>
+        <feature version='[1.46,1.47)'>azure-storage</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/12.25.2</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob-changefeed/${azure-storage-blob-changefeed-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-blob/${project.version}</bundle>
