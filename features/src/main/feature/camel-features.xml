@@ -174,7 +174,7 @@
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
         <bundle dependency='true'>mvn:io.projectreactor/reactor-core/3.4.34</bundle>
     </feature>
-    <feature name="azure-storage" start-level="50">
+    <feature name="azure-storage" version="1.46.0" start-level="50">
         <feature>azure</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
     </feature>
