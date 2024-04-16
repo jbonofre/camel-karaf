@@ -532,7 +532,7 @@
     </feature>
     <feature name='camel-azure-schema-registry' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
-        <feature>azure</feature>
+        <feature version='[1.46,1.47)'>azure</feature>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-schema-registry/${project.version}</bundle>
     </feature>
     <feature name='camel-azure-servicebus' version='${project.version}' start-level='50'>
