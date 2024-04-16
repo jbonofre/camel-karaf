@@ -525,7 +525,7 @@
     <feature name='camel-azure-key-vault' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
         <feature version='[2.16,2.17)'>jackson</feature>
-        <feature>azure-eventhubs</feature>
+        <feature version='[1.46,1.47)'>azure-eventhubs</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-security-keyvault-secrets/4.8.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-blob/12.25.2</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-key-vault/${project.version}</bundle>
