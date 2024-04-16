@@ -505,7 +505,7 @@
     <feature name='camel-azure-cosmosdb' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-cloudevents</feature>
         <feature version='[2.16,2.17)'>jackson</feature>
-        <feature>azure</feature>
+        <feature version='[1.46,1.47)'>azure</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-cosmos/4.56.0</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-cosmosdb/${project.version}</bundle>
     </feature>
