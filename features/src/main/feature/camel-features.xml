@@ -179,7 +179,7 @@
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-common/12.24.1</bundle>
     </feature>
     <feature name="azure-eventhubs" version="1.46.0" start-level="50">
-        <feature>azure-storage</feature>
+        <feature version='[1.46,1.47)'>azure-storage</feature>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core-amqp/2.9.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-messaging-eventhubs/5.18.1</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-messaging-eventhubs-checkpointstore-blob/1.19.1</bundle>
