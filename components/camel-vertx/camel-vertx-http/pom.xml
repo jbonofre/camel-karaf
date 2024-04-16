@@ -23,21 +23,20 @@
 
     <parent>
         <groupId>org.apache.camel.karaf</groupId>
-        <artifactId>camel-karaf-components</artifactId>
+        <artifactId>camel-vertx-parent</artifactId>
         <version>4.5.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>camel-salesforce</artifactId>
+    <artifactId>camel-vertx-http</artifactId>
     <packaging>bundle</packaging>
-    <name>Apache Camel :: Karaf :: Components :: Salesforce</name>
+    <name>Apache Camel :: Karaf :: Components :: Vertx HTTP</name>
 
     <properties>
         <camel.osgi.export>
             org.apache.camel*;version=${camel.version}
         </camel.osgi.export>
         <camel.osgi.import>
-            !com.salesforce.eventbus.protobuf*,
             *
         </camel.osgi.import>
     </properties>
@@ -45,7 +44,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-salesforce</artifactId>
+            <artifactId>camel-vertx-http</artifactId>
             <version>${camel.version}</version>
             <exclusions>
                 <exclusion>
@@ -70,7 +69,7 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>org.apache.camel:camel-salesforce</include>
+                                    <include>org.apache.camel:camel-vertx-http</include>
                                 </includes>
                             </artifactSet>
                         </configuration>

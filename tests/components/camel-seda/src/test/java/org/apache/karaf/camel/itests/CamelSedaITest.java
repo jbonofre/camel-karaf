@@ -13,35 +13,25 @@
  */
 package org.apache.karaf.camel.itests;
 
-import static org.junit.Assert.assertTrue;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.concurrent.TimeUnit;
-
-import org.awaitility.Awaitility;
+import org.apache.camel.component.mock.MockEndpoint;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
-import org.ops4j.pax.exam.spi.reactors.PerClass;
+import org.ops4j.pax.exam.spi.reactors.PerSuite;
 
 
 @RunWith(PaxExam.class)
-@ExamReactorStrategy(PerClass.class)
-public class CamelSedaITest extends CamelKarafITest {
+@ExamReactorStrategy(PerSuite.class)
+public class CamelSedaITest extends AbstractCamelKarafResultMockBasedITest {
 
-
-    @Test
-    public void testSedaComponent() throws Exception {
-        installBundle("file://"+ getBaseDir() +"/camel-seda-test-"+ getVersion() + ".jar",true);
-        assertBundleInstalled("camel-seda-test");
-        assertBundleInstalledAndRunning("camel-seda-test");
-        Path filePath  = Path.of(getBaseDir(),"testResult.txt");
-        Awaitility.await().atMost(5, TimeUnit.SECONDS)
-                .until(() -> Files.exists(filePath));
-        assertTrue(Files.exists(filePath));
-
+    @Override
+    protected void configureMock(MockEndpoint mock) {
+        mock.expectedBodiesReceived("OK");
     }
 
+    @Test
+    public void testResultMock() throws Exception {
+        assertMockEndpointsSatisfied();
+    }
 }
