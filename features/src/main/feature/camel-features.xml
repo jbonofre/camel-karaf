@@ -168,7 +168,7 @@
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/regions/${aws-java-sdk2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/utils/${aws-java-sdk2-version}</bundle>
     </feature>
-    <feature name="azure" start-level="50">
+    <feature name="azure" version="1.46.0" start-level="50">
         <bundle dependency='true'>wrap:mvn:com.azure/azure-core/1.46.0</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-identity/1.11.2</bundle>
         <bundle dependency='true'>mvn:org.reactivestreams/reactive-streams/${reactive-streams-version}</bundle>
