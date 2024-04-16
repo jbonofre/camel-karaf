@@ -551,7 +551,7 @@
     </feature>
     <feature name='camel-azure-storage-datalake' version='${project.version}' start-level='50'>
         <feature version='${camel.osgi.version.range}'>camel-core</feature>
-        <feature>azure-storage</feature>
+        <feature version='[1.46,1.47)'>azure-storage</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${commons-io-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.azure/azure-storage-file-datalake/12.18.1</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-azure-storage-datalake/${project.version}</bundle>
