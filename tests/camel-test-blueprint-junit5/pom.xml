@@ -66,12 +66,6 @@
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-cloud</artifactId>
-            <version>${camel-version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
             <artifactId>camel-management</artifactId>
             <version>${camel-version}</version>
             <scope>test</scope>

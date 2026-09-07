@@ -279,7 +279,6 @@
         <bundle>mvn:org.apache.camel.karaf/camel-core-osgi/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-core-catalog/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-console/${project.version}</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-cloud/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-cluster/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-health/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-xml-io/${project.version}</bundle>
