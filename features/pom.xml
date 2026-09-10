@@ -96,7 +96,7 @@
                         <descriptor>mvn:org.apache.karaf.features/spring/${karaf-version}/xml/features</descriptor>
                     </descriptors>
                     <distribution>org.apache.karaf.features:framework</distribution>
-                    <javase>${jdk-version}</javase>
+                    <javase>${javaVersion}</javase>
                     <framework>
                         <feature>framework</feature>
                     </framework>
