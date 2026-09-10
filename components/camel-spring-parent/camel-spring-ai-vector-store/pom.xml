@@ -28,9 +28,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>camel-spring-ai</artifactId>
+    <artifactId>camel-spring-ai-vector-store</artifactId>
     <packaging>bundle</packaging>
-    <name>Apache Camel :: Karaf :: Components :: Spring Parent :: Parent</name>
+    <name>Apache Camel :: Karaf :: Components :: Spring Parent :: Spring AI Vector Store</name>
 
     <properties>
         <camel.osgi.export>
@@ -44,7 +44,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-spring-ai</artifactId>
+            <artifactId>camel-spring-ai-vector-store</artifactId>
             <version>${camel-version}</version>
             <exclusions>
                 <exclusion>
@@ -56,6 +56,12 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>../../../src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -69,7 +75,7 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>org.apache.camel:camel-spring-ai</include>
+                                    <include>org.apache.camel:camel-spring-ai-vector-store</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
