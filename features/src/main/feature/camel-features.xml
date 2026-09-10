@@ -263,6 +263,7 @@
     <feature name="camel-core" version="${project.version}" start-level="50">
         <feature version="[${servicemix-specs-version},11)">xml-specs-api</feature>
         <bundle dependency="true">mvn:commons-codec/commons-codec/${commons-codec-version}</bundle>
+        <bundle dependency="true">mvn:org.jspecify/jspecify/${jspecify-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-api/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-management-api/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-util/${project.version}</bundle>
