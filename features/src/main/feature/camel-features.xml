@@ -602,6 +602,7 @@
         <feature version="${aws-java-sdk2-version}">awssdk</feature>
         <bundle dependency='true'>mvn:commons-io/commons-io/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/eventbridge/${aws-java-sdk2-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:software.amazon.awssdk/sqs/${aws-java-sdk2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-aws2-eventbridge/${project.version}</bundle>
     </feature>
     <feature name='camel-aws2-iam' version='${project.version}' start-level='50'>
@@ -979,6 +980,13 @@
     </feature>
     <feature name='camel-clickhouse' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
+        <feature version='[33,34)'>guava</feature>
+        <feature version='[5,6)'>http-client</feature>
+        <bundle dependency='true'>wrap:mvn:com.clickhouse/client-v2/${clickhouse-client-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.clickhouse/clickhouse-data/${clickhouse-client-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.clickhouse/clickhouse-client/${clickhouse-client-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:org.roaringbitmap/RoaringBitmap/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:at.yawk.lz4/lz4-java/${lz4-java-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-clickhouse/${project.version}</bundle>
     </feature>
     <feature name='camel-clickup' version='${project.version}' start-level='50'>
@@ -1362,7 +1370,7 @@
         <bundle dependency='true'>mvn:jakarta.json/jakarta.json-api/${jakarta-json-api-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}$overwrite=merge&amp;${spi-consumer}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry.semconv/opentelemetry-semconv/1.37.0</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.httpcomponents/httpasyncclient/${httpasyncclient-version}</bundle>
         <bundle dependency='true'>mvn:jakarta.json.bind/jakarta.json.bind-api/${jakarta-json-bind-api-version}</bundle>
@@ -1486,6 +1494,7 @@
     <feature name='camel-geocoder' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[5,6)'>http-client</feature>
+        <feature version='${camel-osgi-jackson3-version}'>jackson3</feature>
         <bundle dependency='true'>wrap:mvn:com.google.maps/google-maps-services/${google-maps-services-version}</bundle>
         <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
         <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>
@@ -1742,10 +1751,10 @@
     </feature>
     <feature name='camel-graphql' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
+        <feature version='${camel-osgi-version-range}'>camel-http</feature>
         <feature version='[5,6)'>http-client</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:com.graphql-java/graphql-java/${graphql-java-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle>mvn:org.apache.camel.karaf/camel-http-base/${project.version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-graphql/${project.version}</bundle>
     </feature>
     <feature name='camel-groovy' version='${project.version}' start-level='50'>
@@ -1859,6 +1868,10 @@
     </feature>
     <feature name='camel-huggingface' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
+        <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
+        <bundle dependency='true'>wrap:mvn:ai.djl/api/${djl-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.djl.huggingface/tokenizers/${djl-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.djl.python/python/${djl-python-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-huggingface/${project.version}</bundle>
     </feature>
     <feature name='camel-ibm-cos' version='${project.version}' start-level='50'>
@@ -1900,6 +1913,15 @@
     </feature>
     <feature name='camel-ibm-watsonx-data' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/logging-interceptor/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okhttp3/okhttp-urlconnection/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.squareup.okio/okio/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:org.jetbrains.kotlin/kotlin-stdlib/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:io.reactivex.rxjava2/rxjava/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.ibm.cloud/sdk-core/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.ibm.cloud/watsonx-data-common/${ibm-watsonx-data-sdk-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.ibm.cloud/watson-x-data/${ibm-watsonx-data-sdk-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-ibm-watsonx-data/${project.version}</bundle>
     </feature>
     <feature name='camel-ical' version='${project.version}' start-level='50'>
@@ -2251,6 +2273,7 @@
     <feature name='camel-jsonpath' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
+        <feature version='${camel-osgi-jackson3-version}'>jackson3</feature>
         <bundle dependency='true'>mvn:com.jayway.jsonpath/json-path/${json-path-version}</bundle>
         <bundle dependency='true'>mvn:net.minidev/json-smart/${json-smart-version}</bundle>
         <bundle dependency='true'>mvn:net.minidev/accessors-smart/${json-smart-version}</bundle>
@@ -2564,7 +2587,7 @@
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-initializer/${auto-detect-version:alias=io.prometheus/prometheus-metrics-tracer-common}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-otel/${auto-detect-version:alias=io.prometheus/prometheus-metrics-tracer-common}</bundle>
         <bundle dependency='true'>mvn:io.prometheus/prometheus-metrics-tracer-otel-agent/${auto-detect-version:alias=io.prometheus/prometheus-metrics-tracer-common}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-config/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.prometheus/prometheus-metrics-config/${auto-detect-version}$overwrite=merge&amp;Import-Package=javax.annotation;resolution:=optional,*</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-registry-prometheus/${micrometer-version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf4-version}</bundle>
         <bundle dependency='true'>mvn:io.smallrye/jandex/${jandex-version}</bundle>
@@ -2862,6 +2885,7 @@
         <bundle>mvn:org.apache.camel.karaf/camel-openstack/${project.version}</bundle>
     </feature>
     <feature name='camel-opentelemetry' version='${project.version}' start-level='50'>
+        <feature prerequisite='true'>spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-tracing</feature>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
@@ -2870,17 +2894,21 @@
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk-trace/${opentelemetry-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk-logs/${opentelemetry-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}$overwrite=merge&amp;${spi-consumer}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-semconv-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-opentelemetry/${project.version}</bundle>
     </feature>
     <feature name='camel-opentelemetry-metrics' version='${project.version}' start-level='50'>
+        <feature prerequisite='true'>spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-telemetry</feature>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}$overwrite=merge&amp;${spi-consumer}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-opentelemetry-metrics/${project.version}</bundle>
     </feature>
     <feature name='camel-opentelemetry2' version='${project.version}' start-level='50'>
+        <feature prerequisite='true'>spifly</feature>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-version-range}'>camel-telemetry</feature>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-api/${opentelemetry-version}</bundle>
@@ -2890,7 +2918,7 @@
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk-logs/${opentelemetry-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-sdk-metrics/${opentelemetry-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-context/${opentelemetry-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-common/${opentelemetry-version}$overwrite=merge&amp;${spi-consumer}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry/opentelemetry-semconv/${opentelemetry-semconv-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opentelemetry.proto/opentelemetry-proto/${opentelemetry-proto-version}</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
@@ -3275,7 +3303,7 @@
         <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-core/${shiro-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-cipher/${shiro-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.shiro/shiro-crypto-hash/${shiro-version}</bundle>
-        <bundle dependency='true'>mvn:jakarta.annotation/jakarta.annotation-api/${auto-detect-version}</bundle>
+        <bundle dependency='true'>mvn:jakarta.annotation/jakarta.annotation-api/${jakarta-annotation-api-version}</bundle>
         <bundle dependency='true'>mvn:commons-beanutils/commons-beanutils/${commons-beanutils-version}</bundle>
         <bundle dependency='true'>mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.apache.shiro/shiro-jakarta-ee/${shiro-version}</bundle>
@@ -3400,7 +3428,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-spring-version}'>spring-tx</feature>
         <feature version='${camel-osgi-spring-version}'>spring-messaging</feature>
-        <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${auto-detect-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:org.springframework.retry/spring-retry/${spring-retry-version}</bundle>
         <bundle dependency='true'>mvn:com.rabbitmq/amqp-client/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.micrometer/micrometer-commons/${micrometer-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:io.micrometer/micrometer-observation/${micrometer-version}</bundle>

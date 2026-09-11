@@ -495,6 +495,7 @@
         <spring-vault-core-version>4.1.0</spring-vault-core-version>
         <spring-version>7.0.8</spring-version>
         <spring-rabbitmq-version>4.1.0</spring-rabbitmq-version>
+        <spring-retry-version>2.0.13</spring-retry-version>
         <spring-security-version>7.1.0</spring-security-version>
         <spring-ws-version>5.0.2</spring-ws-version>
         <squareup-okhttp-version>3.14.9</squareup-okhttp-version>
