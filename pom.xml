@@ -110,6 +110,7 @@
         <asn1bean-version>1.14.0</asn1bean-version>
         <assertj-version>3.27.7</assertj-version>
         <asterisk-java-version>3.42.2</asterisk-java-version>
+        <async-http-client-version>3.0.9</async-http-client-version>
         <atlassian-fugue-version>6.1.5</atlassian-fugue-version>
         <atmosphere-version>3.1.0</atmosphere-version>
         <avro-version>1.12.1</avro-version>
@@ -133,8 +134,10 @@
         <camunda-version>7.24.0</camunda-version>
         <camunda-client-java-version>8.9.13</camunda-client-java-version>
         <cassandra-driver-version>4.19.3</cassandra-driver-version>
+        <cglib-version>3.3.0</cglib-version>
         <clickhouse-client-version>0.9.8</clickhouse-client-version>
         <jta-api-1-2-version>1.2</jta-api-1-2-version>
+        <checker-framework-version>3.42.0</checker-framework-version>
         <chunk-templates-version>3.6.2</chunk-templates-version>
         <citrus-version>5.0.0</citrus-version>
         <classgraph-version>4.8.186</classgraph-version>
@@ -153,6 +156,7 @@
         <commons-io-version>2.22.0</commons-io-version>
         <commons-lang3-version>3.20.0</commons-lang3-version>
         <commons-logging-version>1.4.0</commons-logging-version>
+        <commons-math3-version>3.6.1</commons-math3-version>
         <commons-net-version>3.13.0</commons-net-version>
         <commons-pool2-version>2.13.1</commons-pool2-version>
         <commons-text-version>1.15.0</commons-text-version>
@@ -375,9 +379,11 @@
         <micrometer-version>1.17.0</micrometer-version>
         <micrometer-tracing-version>1.7.0</micrometer-tracing-version>
         <microprofile-config-version>3.1.1</microprofile-config-version>
+        <microprofile-fault-tolerance-version>4.1.2</microprofile-fault-tolerance-version>
         <milo-version>1.1.6</milo-version>
         <milvus-client-version>2.6.22</milvus-client-version>
         <mina-version>2.2.9</mina-version>
+        <minidns-version>1.0.5</minidns-version>
         <minio-version>9.0.3</minio-version>
         <mockito-version>5.23.0</mockito-version>
         <mojo-executor-version>2.4.1</mojo-executor-version>
@@ -388,10 +394,15 @@
         <mybatis-version>3.5.19</mybatis-version>
         <narayana-version>7.3.4.Final</narayana-version>
         <neoscada-version>0.4.0</neoscada-version>
+        <neo4j-bolt-version>12.0.0</neo4j-bolt-version>
         <neo4j-version>6.2.0</neo4j-version>
         <netty-version>4.2.16.Final</netty-version>
+        <netty-reactive-streams-version>2.0.5</netty-reactive-streams-version>
         <networknt-json-schema-validator-version>2.0.1</networknt-json-schema-validator-version>
         <nimbus-jose-jwt>10.9.1</nimbus-jose-jwt>
+        <nimbusds-content-type-version>2.3</nimbusds-content-type-version>
+        <nimbusds-lang-tag-version>1.7</nimbusds-lang-tag-version>
+        <nimbusds-oauth2-oidc-sdk-version>11.23</nimbusds-oauth2-oidc-sdk-version>
         <olingo2-version>2.0.13</olingo2-version>
         <olingo4-version>5.0.0</olingo4-version>
         <ognl-version>3.4.11</ognl-version>
@@ -413,6 +424,7 @@
         <paho-version>1.2.5</paho-version>
         <parquet-common-version>1.17.1</parquet-common-version>
         <parquet-avro-version>1.17.1</parquet-avro-version>
+        <parson-version>1.1.9</parson-version>
         <pdfbox-version>3.0.8</pdfbox-version>
         <pgjdbc-driver-version>42.7.13</pgjdbc-driver-version>
         <pgjdbc-ng-driver-version>0.8.9</pgjdbc-ng-driver-version>
@@ -467,6 +479,7 @@
         <smooks-version>2.2.1</smooks-version>
         <snakeyaml-version>2.6</snakeyaml-version>
         <snakeyaml-engine-version>3.0.1</snakeyaml-engine-version>
+        <snakeyaml-engine-kubernetes-version>3.0.1</snakeyaml-engine-kubernetes-version>
         <snmp4j-version>3.13.1</snmp4j-version>
         <solr-version>10.0.0</solr-version>
         <splunk-version>1.9.5_1</splunk-version>
@@ -505,6 +518,7 @@
         <undertow-servlet-version>2.3.26.Final</undertow-servlet-version>
         <undertow-version>2.4.2.Final</undertow-version>
         <univocity-parsers-version>2.10.2</univocity-parsers-version>
+        <vavr-version>1.0.0</vavr-version>
         <velocity-tools-version>3.1</velocity-tools-version>
         <velocity-version>2.4.1</velocity-version>
         <vertx-version>4.5.31</vertx-version>
@@ -520,6 +534,7 @@
         <xml-resolver-version>1.2</xml-resolver-version>
         <xmlsec-version>4.0.4</xmlsec-version>
         <xmlunit-version>2.13.0</xmlunit-version>
+        <xpp3-version>1.1.4c</xpp3-version>
         <yasson-version>3.0.4</yasson-version>
         <yetus-audience-annotations-version>0.15.1</yetus-audience-annotations-version>
         <zeebe-version>8.9.13</zeebe-version>

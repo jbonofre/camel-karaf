@@ -1274,9 +1274,9 @@
         <feature version='[5,6)'>http-client</feature>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.datatype/jackson-datatype-jsr310/${jackson2-version}</bundle>
         <bundle dependency='true'>wrap:mvn:org.openapitools/jackson-databind-nullable/${jackson-databind-nullable-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:ai.docling/docling-core/${docling-core-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:ai.docling/docling-serve-api/${docling-serve-api-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:ai.docling/docling-serve-client/${docling-serve-client-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.docling/docling-core/${docling-java-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.docling/docling-serve-api/${docling-java-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:ai.docling/docling-serve-client/${docling-java-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-docling/${project.version}</bundle>
     </feature>
     <feature name='camel-drill' version='${project.version}' start-level='50'>
@@ -1524,8 +1524,8 @@
         <feature version='[4,5)'>http-client</feature>
         <bundle dependency='true'>wrap:mvn:com.google.api-client/google-api-client/${google-api-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-drive/${google-api-services-drive-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>mvn:com.google.code.gson/gson/${gson-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
@@ -1549,8 +1549,8 @@
         <bundle dependency='true'>wrap:mvn:com.google.api-client/google-api-client/${google-api-client-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api/gax/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-functions/${google-cloud-functions-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:com.google.protobuf/protobuf-java/${protobuf-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
@@ -1586,8 +1586,8 @@
         <bundle dependency='true'>wrap:mvn:com.google.api/gax/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api/gax-grpc/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-cloud-pubsub-v1/${auto-detect-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}$${spi-consumer}</bundle>
         <bundle dependency='true'>mvn:org.threeten/threetenbp/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client/${google-cloud-http-client-version}$overwrite=merge&amp;Import-Package=com.google.common*;version="[33,34)",*;resolution:=optional</bundle>
@@ -1644,8 +1644,8 @@
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-gson/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-apache-v2/${google-cloud-http-client-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.http-client/google-http-client-jackson2/${google-cloud-http-client-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-contrib-http-util/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.opencensus/opencensus-api/${auto-detect-version}</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.apis/google-api-services-sheets/${google-api-services-sheets-version}</bundle>
@@ -1695,8 +1695,8 @@
         <bundle dependency='true'>wrap:mvn:com.google.api/api-common/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api.grpc/proto-google-common-protos/${proto-google-common-protos-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.cloud/google-cloud-aiplatform/${google-cloud-aiplatform-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.api/gax/${auto-detect-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle dependency='true'>wrap:mvn:com.google.genai/google-genai/${google-genai-version}$overwrite=merge&amp;Import-Package=*;resolution:=optional</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-google-vertexai/${project.version}</bundle>
@@ -1728,8 +1728,8 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='[4.1,5)'>netty</feature>
         <bundle dependency='true'>wrap:mvn:com.auth0/java-jwt/${grpc-java-jwt-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${grpc-google-auth-library-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${grpc-google-auth-library-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-oauth2-http/${google-auth-library-oauth2-http-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:com.google.auth/google-auth-library-credentials/${google-auth-library-oauth2-http-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-core/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-auth/${grpc-version}</bundle>
         <bundle dependency='true'>wrap:mvn:io.grpc/grpc-api/${grpc-version}$${spi-consumer}</bundle>
@@ -2343,7 +2343,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-hugging-face/${langchain4j-hugging-face-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-hugging-face/${langchain4j-beta-version}</bundle>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-open-ai/${langchain4j-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-chat/${project.version}</bundle>
     </feature>
@@ -2355,7 +2355,7 @@
     <feature name='camel-langchain4j-embeddings' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-hugging-face/${langchain4j-hugging-face-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-hugging-face/${langchain4j-beta-version}</bundle>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-open-ai/${langchain4j-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-embeddings/${project.version}</bundle>
     </feature>
@@ -2368,7 +2368,7 @@
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j/${langchain4j-version}</bundle>
         <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-core/${langchain4j-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-community-dashscope/${langchain4j-community-dashscope-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:dev.langchain4j/langchain4j-community-dashscope/${langchain4j-community-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-langchain4j-tokenizer/${project.version}</bundle>
     </feature>
     <feature name='camel-langchain4j-tools' version='${project.version}' start-level='50'>
@@ -3402,7 +3402,6 @@
         <bundle dependency='true'>mvn:io.netty/netty-codec-http2/${netty-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-http3/${netty-version}</bundle>
         <bundle dependency='true'>mvn:io.netty/netty-codec-classes-quic/${netty-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:io.projectreactor.netty.incubator/reactor-netty-incubator-quic/${reactor-netty-incubator-quic-version}$overwrite=merge&amp;Import-Package=io.netty.channel.kqueue;resolution:=optional;version="[4.1,5)",io.netty.channel.uring;resolution:=optional;version="[4.1,5)",io.netty.incubator.channel.uring;resolution:=optional,io.netty*;version="[4.1,5)",*;resolution:=optional</bundle>
         <bundle dependency='true'>mvn:com.google.code.findbugs/jsr305/${findbugs-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-stitch/${project.version}</bundle>
     </feature>
@@ -3616,8 +3615,8 @@
     <feature name='camel-wasm' version='${project.version}' start-level='50'>
         <feature version='${camel-osgi-version-range}'>camel-core</feature>
         <feature version='${camel-osgi-jackson2-version}'>jackson</feature>
-        <bundle dependency='true'>wrap:mvn:com.dylibso.chicory/runtime/${chicory-version}</bundle>
-        <bundle dependency='true'>wrap:mvn:com.dylibso.chicory/wasm/${chicory-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:run.endive/wasm/${endive-version}</bundle>
+        <bundle dependency='true'>wrap:mvn:run.endive/runtime/${endive-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-wasm/${project.version}</bundle>
     </feature>
     <feature name='camel-weather' version='${project.version}' start-level='50'>
@@ -3691,6 +3690,12 @@
         <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-extensions/${smack-version}</bundle>
         <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-tcp/${smack-version}</bundle>
         <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-im/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-xmlparser/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-xmlparser-stax/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-java8/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-resolver-javax/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-sasl-javax/${smack-version}</bundle>
+        <bundle dependency='true'>mvn:org.igniterealtime.smack/smack-streammanagement/${smack-version}</bundle>
         <bundle dependency='true'>mvn:org.jxmpp/jxmpp-jid/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.jxmpp/jxmpp-core/${auto-detect-version}</bundle>
         <bundle dependency='true'>mvn:org.jxmpp/jxmpp-util-cache/${auto-detect-version}</bundle>
