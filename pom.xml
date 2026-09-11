@@ -558,7 +558,7 @@
         <camel-osgi-jakarta-ws-rs-version>[3.1,4)</camel-osgi-jakarta-ws-rs-version>
         <camel-osgi-jakarta-xml-ws-version>[4,5)</camel-osgi-jakarta-xml-ws-version>
         <camel-osgi-jetty-version>[11,12)</camel-osgi-jetty-version>
-        <camel-osgi-spring-version>[6.2,6.3)</camel-osgi-spring-version>
+        <camel-osgi-spring-version>[7.0,7.1)</camel-osgi-spring-version>
         <camel-osgi-saaj-version>[2,4)</camel-osgi-saaj-version>
         <camel-osgi-slf4j-version>[2,3)</camel-osgi-slf4j-version>
         <camel-osgi-cxf-version>[4.2,4.3)</camel-osgi-cxf-version>
