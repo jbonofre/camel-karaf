@@ -64,7 +64,7 @@
             org.springframework.web*;resolution:=optional;version="${camel-osgi-spring-version}",
             org.objectweb.asm*;resolution:=optional;version="${camel-osgi-asm-version}",
             jakarta.activation;version="${camel-osgi-jakarta-activation-version}",
-            jakarta.annotation;version="${camel-osgi-jakarta-annotation2-version}",
+            jakarta.annotation;version="${camel-osgi-jakarta-annotation-version}",
             jakarta.xml.ws*;version="${camel-osgi-jakarta-xml-ws-version}",
             jakarta.xml.bind*;version="${camel-osgi-jakarta-bind-version}",
             jakarta.validation*;resolution:=optional;version="${camel-osgi-jakarta-validation-version}",

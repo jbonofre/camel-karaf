@@ -916,7 +916,6 @@
         <bundle dependency='true'>mvn:com.github.ben-manes.caffeine/caffeine/${caffeine-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
-        <bundle dependency='true'>mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta-ws-rs-api2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-bonita/${project.version}</bundle>
     </feature>
     <feature name='camel-box' version='${project.version}' start-level='50'>
@@ -3271,8 +3270,8 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
-        <bundle dependency='true'>mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta-ws-rs-api2-version}</bundle>
         <feature version='${camel-osgi-version-range}'>camel-cxf</feature>
+        <bundle dependency='true'>mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta-ws-rs-api2-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-oauth2/${cxf-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose-jaxrs/${cxf-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.cxf/cxf-rt-rs-security-jose/${cxf-version}</bundle>
@@ -3751,7 +3750,6 @@
         <bundle dependency='true'>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-xml/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${jackson2-version}</bundle>
         <bundle dependency='true'>mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${jackson2-version}</bundle>
-        <bundle dependency='true'>mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta-ws-rs-api2-version}</bundle>
         <bundle>mvn:org.apache.camel.karaf/camel-wordpress/${project.version}</bundle>
     </feature>
     <feature name='camel-workday' version='${project.version}' start-level='50'>
