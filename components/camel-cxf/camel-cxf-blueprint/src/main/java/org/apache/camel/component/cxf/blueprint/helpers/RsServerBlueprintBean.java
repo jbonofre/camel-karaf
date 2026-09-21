@@ -19,7 +19,7 @@ package org.apache.camel.component.cxf.blueprint.helpers;
 import java.util.HashMap;
 
 import org.apache.camel.component.cxf.common.NullFaultListener;
-import org.apache.cxf.feature.LoggingFeature;
+import org.apache.cxf.ext.logging.LoggingFeature;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.logging.FaultListener;
 import org.osgi.framework.BundleContext;
@@ -57,21 +57,13 @@ public class RsServerBlueprintBean extends JAXRSServerFactoryBean implements Blu
     }
 
     public void setLoggingFeatureEnabled(boolean loggingFeatureEnabled) {
-        if (loggingFeature != null) {
-            getFeatures().remove(loggingFeature);
-            loggingFeature = null;
-        }
+        removeLoggingFeature();
         if (loggingFeatureEnabled) {
-            if (getLoggingSizeLimit() > 0) {
-                loggingFeature = new LoggingFeature(getLoggingSizeLimit());
-            } else {
-                loggingFeature = new LoggingFeature();
-            }
+            loggingFeature = newLoggingFeature(getLoggingSizeLimit());
             getFeatures().add(loggingFeature);
         }
-        
     }
-    
+
     public int getLoggingSizeLimit() {
         return loggingSizeLimit;
     }
@@ -79,14 +71,25 @@ public class RsServerBlueprintBean extends JAXRSServerFactoryBean implements Blu
     public void setLoggingSizeLimit(int loggingSizeLimit) {
         this.loggingSizeLimit = loggingSizeLimit;
         if (loggingFeature != null) {
-            getFeatures().remove(loggingFeature);
-            if (loggingSizeLimit > 0) {
-                loggingFeature = new LoggingFeature(loggingSizeLimit);
-            } else {
-                loggingFeature = new LoggingFeature();
-            }
+            removeLoggingFeature();
+            loggingFeature = newLoggingFeature(loggingSizeLimit);
             getFeatures().add(loggingFeature);
         }
+    }
+
+    private void removeLoggingFeature() {
+        if (loggingFeature != null) {
+            getFeatures().remove(loggingFeature);
+            loggingFeature = null;
+        }
+    }
+
+    private static LoggingFeature newLoggingFeature(int limit) {
+        LoggingFeature feature = new LoggingFeature();
+        if (limit > 0) {
+            feature.setLimit(limit);
+        }
+        return feature;
     }
     
     public void setSkipFaultLogging(boolean skipFaultLogging) {

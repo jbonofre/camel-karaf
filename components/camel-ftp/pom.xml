@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache.camel.karaf</groupId>
         <artifactId>camel-karaf-components</artifactId>
-        <version>4.18.2-SNAPSHOT</version>
+        <version>4.22.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -45,6 +45,19 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-ftp</artifactId>
+            <version>${camel-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.camel</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- camel-ftp-common shares the org.apache.camel.component.file.remote package
+             with camel-ftp, so it has to live in the same bundle -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-ftp-common</artifactId>
             <version>${camel-version}</version>
             <exclusions>
                 <exclusion>
@@ -76,6 +89,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.apache.camel:camel-ftp</include>
+                                    <include>org.apache.camel:camel-ftp-common</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
