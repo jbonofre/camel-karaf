@@ -68,7 +68,7 @@ public class CamelCxfWhiteboardITest extends AbstractCamelSingleFeatureRouteITes
     }
 
     private String getWsEndpointAddress() {
-        return "http://localhost:" + System.getProperty("cxf.whiteboard.port") + "/CamelCxfWhiteboardRouteSupplier/test";
+        return "http://localhost:" + System.getProperty(ExternalResourceProviders.CXF_WHITEBOARD_PORT) + "/CamelCxfWhiteboardRouteSupplier/test";
     }
 
     @Override
